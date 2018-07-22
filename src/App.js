@@ -11,11 +11,9 @@ class App extends Component {
     return (
       <div className="container">
        <Switch>
-        <div>
           <Route exact path="/" component={FoodJokes}/>
           <Route path="/special" component={CelebrityJokes} onEnter={requireAuth} />
           <Route path="/callback" component={Callback} />
-        </div>
       </Switch>
       </div>
     );

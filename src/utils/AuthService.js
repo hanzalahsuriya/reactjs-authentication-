@@ -5,10 +5,10 @@ const ID_TOKEN_KEY = 'id_token';
 const ACCESS_TOKEN_KEY = 'access_token';
 
 const CLIENT_ID = 'SMq7SRt21HhOFHEaea9fEBNIJ3CPrbTF';
-const CLIENT_DOMAIN = 'AUTH0_DOMAIN';
+const CLIENT_DOMAIN = 'hanz.eu.auth0.com';
 const REDIRECT = 'http://localhost:3001/callback';
 const SCOPE = 'YOUR_SCOPE';
-const AUDIENCE = 'AUDIENCE_ATTRIBUTE';
+const AUDIENCE = 'http://localhost:3001/';
 
 var auth = new auth0.WebAuth({
   clientID: CLIENT_ID,
@@ -22,6 +22,7 @@ export function login() {
     audience: AUDIENCE,
     scope: SCOPE
   });
+  
 }
 
 export function logout() {
