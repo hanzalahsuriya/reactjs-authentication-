@@ -11,7 +11,6 @@ class Nav extends Component {
   }
 
   logout() {
-    console.log('Logging out');
     this.props.history.push("/");
     logout();
   }

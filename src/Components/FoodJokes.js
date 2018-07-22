@@ -4,8 +4,8 @@ import Nav from './Nav';
 import { Link } from 'react-router-dom';
 import { isLoggedIn } from '../utils/AuthService';
 class FoodJokes extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = { jokes: [] };
   }
 
@@ -23,7 +23,7 @@ class FoodJokes extends Component {
     const jokes = this.state.jokes;
     return (
       <div>
-        <Nav />
+        <Nav history={this.props.history} />
         <h3 className="text-center">MY APP</h3>
         <hr />
         {

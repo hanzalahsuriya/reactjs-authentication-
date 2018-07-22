@@ -4,8 +4,8 @@ import Nav from './Nav';
 import { getCelebrityData } from '../utils/api';
 
 class CelebrityJokes extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = { jokes: [] };
   }
 
@@ -21,7 +21,7 @@ class CelebrityJokes extends Component {
     const jokes = this.state.jokes;
     return (
       <div>
-        <Nav />
+        <Nav history={this.props.history} />
         <h3 className="text-center">Privileged Chuck Norris Celebrity Jokes</h3>
         <hr />
 
