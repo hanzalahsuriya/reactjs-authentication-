@@ -20,3 +20,6 @@ Steps:
 Learning
 
 
+https://auth0.com/blog/reactjs-authentication-tutorial/
+https://auth0.com/blog/adding-authentication-to-your-react-flux-app/
+https://auth0.com/blog/testing-react-applications-with-jest/
