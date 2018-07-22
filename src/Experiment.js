@@ -15,7 +15,7 @@ class Experiment extends Component {
   }
 
   render() {
-    return (<p></p>);
+    return (<p>Experiment</p>);
   }
 }
 

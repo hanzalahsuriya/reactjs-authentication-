@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Experiment from './Experiment';
+import FoodJokes from './Components/FoodJokes';
+import { Route, Switch } from 'react-router-dom';
+import CelebrityJokes from './Components/CelebrityJokes';
+import { requireAuth } from './utils/AuthService';
+import Callback from './Components/Callback';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Experiment />
+      <div className="container">
+       <Switch>
+        <div>
+          <Route exact path="/" component={FoodJokes}/>
+          <Route path="/special" component={CelebrityJokes} onEnter={requireAuth} />
+          <Route path="/callback" component={Callback} />
+        </div>
+      </Switch>
       </div>
     );
   }
